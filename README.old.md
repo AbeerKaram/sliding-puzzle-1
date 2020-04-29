@@ -13,5 +13,6 @@ Our project is a sliding puzzle game that consists of a frame of numbered square
 
 ## User story:
 - As a user, I want to play game
-- As a user, I want to simple game without complication
-
+- As a user, I want to play a game that it was easy and simple.
+- As a user, I should see many squares that hold numbers which is not arranged and one empty square. 
+- As a user, I should arrange these numbers to win the game
