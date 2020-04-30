@@ -8,6 +8,7 @@ function Game() {
     [9, 10, 11, 12],
     [13, 14, 15, 16],
   ]);
+  const [finish, setFinish] = useState(false);
 
   const suffle = () => {
     let first;
@@ -48,6 +49,7 @@ function Game() {
       newGrid[yy[6]][xx[6]] = first;
     }
     setGrid(newGrid);
+    setFinish(false);
   };
 
   useEffect(() => {
@@ -59,6 +61,11 @@ function Game() {
     newGrid[y2][x2] = grid[y1][x1];
     newGrid[y1][x1] = 16;
     setGrid(newGrid);
+    if (
+      JSON.stringify(newGrid) ===
+      '[[1,2,3,4],[5,6,7,8],[9,10,11,12],[13,14,15,16]]'
+    )
+      setFinish(true);
   };
 
   const handleClick = (y, x) => {
@@ -93,6 +100,11 @@ function Game() {
         )}
       </div>
       <br />
+      {finish && (
+        <div className="message">
+          <p>Congratulation , you won</p>
+        </div>
+      )}
       <button type="button" className="btn btnRestart" onClick={suffle}>
         restart
       </button>
