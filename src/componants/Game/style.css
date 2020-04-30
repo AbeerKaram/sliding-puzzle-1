@@ -45,3 +45,8 @@
     margin-top: 10px;
     font: 32px arial;
   }
+  .message{
+    font-weight: bold;
+    color: rgb(15, 27, 32);
+    text-shadow: 0 0 2px rgb(15, 26, 36);
+  }
